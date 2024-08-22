@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
-        android:name=".GoogleMainApplication"
+        android:name="de.ednt.atlasmanager.GoogleMainApplication"
         tools:replace="android:name"
         tools:ignore="GoogleAppIndexingWarning">
 
@@ -20,7 +20,7 @@
             android:name="com.google.firebase.messaging.default_notification_icon"
             android:resource="@drawable/ic_stat_notify" />
 
-        <service android:exported="false" android:name=".ManagerMessagingService">
+        <service android:exported="false" android:name="de.ednt.atlasmanager.ManagerMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>

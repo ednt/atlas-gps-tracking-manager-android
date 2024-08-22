@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 @file:Suppress("DEPRECATION")
-package org.traccar.manager
+package de.ednt.atlasmanager
 
 import android.annotation.SuppressLint
 import android.app.AlertDialog

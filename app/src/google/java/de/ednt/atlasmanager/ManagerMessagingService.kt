@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.traccar.manager
+package de.ednt.atlasmanager
 
 import android.annotation.SuppressLint
 import android.app.NotificationManager
@@ -23,6 +23,7 @@ import android.os.Build
 import androidx.core.app.NotificationCompat
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
+
 
 class ManagerMessagingService : FirebaseMessagingService() {
 
@@ -39,7 +40,7 @@ class ManagerMessagingService : FirebaseMessagingService() {
         val pendingIntent = PendingIntent.getActivity(this, 0, intent, flags)
         val builder = NotificationCompat.Builder(this, getString(R.string.notification_channel_id))
             .setSmallIcon(R.drawable.ic_stat_notify)
-            .setContentTitle(getString(R.string.app_name))
+            .setContentTitle("ATLAS Manager")
             .setContentText(remoteMessage.notification?.body)
             .setAutoCancel(true)
             .setContentIntent(pendingIntent)

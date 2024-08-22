@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 @file:Suppress("DEPRECATION")
-package org.traccar.manager
+package de.ednt.atlasmanager
 
 import android.content.Intent
 import android.os.Build
@@ -24,6 +24,7 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.preference.PreferenceManager
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -37,6 +38,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         updateEventId(intent)
+        PreferenceManager.getDefaultSharedPreferences(this)
+            .edit().putString(MainActivity.PREFERENCE_URL, "https://my.atlas-gps-tracking.com").apply()
         if (savedInstanceState == null) {
             initContent()
         }
